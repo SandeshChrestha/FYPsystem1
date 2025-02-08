@@ -5,6 +5,7 @@ import authRoute from "./routes/auth.js"
 import futsalsRoute from "./routes/futsals.js"
 import slotsRoute from "./routes/slots.js"
 import usersRoute from "./routes/users.js"
+import cookieParser from "cookie-parser";
 
 const app = express()
 dotenv.config()
@@ -32,6 +33,7 @@ mongoose.connection.on("connected", () => {
 //})
 
 //middlewares
+app.use(cookieParser());
 
 
 app.use(express.json())

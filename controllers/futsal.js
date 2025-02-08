@@ -44,7 +44,7 @@ export const deleteFutsal = async (req, res, next) => {
 export const getFutsal = async (req, res, next) => {
     try {
         const futsal = await Futsal.findById(
-            req.params.id
+            req.params.id,
         );
         res.status(200).json(futsal);
 

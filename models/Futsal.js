@@ -39,11 +39,12 @@ const FutsalSchema = new mongoose.Schema({
     },
     cheapestprice: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     featured: {
         type: Boolean,
-        defult: false,
+        default: false,
     },
 })
 
